@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATS Resume Formatter ✨ Gemini Powered - Yamini K</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+            color: var(--text-main);
+        }
+
+        /* Resume Paper Styles */
+        .resume-paper {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 10mm;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+            position: relative;
+        }
+
+        .section-title {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .job-title { font-weight: 700; color: #0f172a; }
+        .company-name { font-weight: 600; color: #334155; }
+        .date-location { color: var(--text-light); font-size: 13px; }
+        
+        ul { list-style-type: disc; margin-left: 1.25rem; }
+        li { margin-bottom: 4px; line-height: 1.5; font-size: 14px; color: #334155; }
+
+        /* Actions Bar */
+        .actions-bar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(241, 245, 249, 0.9);
+            backdrop-filter: blur(8px);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        @media print {
+            body { background: white; margin: 0; padding: 0; }
+            .no-print { display: none !important; }
+            .resume-paper { box-shadow: none; margin: 0; width: 100%; padding: 15mm; }
+            .preview-container { padding: 0; overflow: visible; height: auto; }
+        }
+
+        .preview-container {
+            padding: 40px 20px;
+            background-color: #f1f5f9;
+        }
+    </style>
+</head>
+<body>
+
+<!-- RESUME CONTENT -->
+<div class="preview-container">
+    <div class="resume-paper" id="resume-content">
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-slate-900 tracking-tight">YAMINI K</h1>
+            <p class="text-lg font-medium text-blue-600 mt-1">Full Stack Developer | React.js & .NET | 100% Remote</p>
+            <div class="flex items-center justify-center gap-4 mt-2 text-sm text-slate-500">
+                <span class="border-r pr-4 border-slate-300">nkyamini@gmail.com</span>
+                <span class="">+91 9840147578</span>
+            </div>
+            <div class="text-xs text-slate-400 mt-1">
+                LinkedIn: linkedin.com/in/yamini-k-4567a724 | GitHub: github.com/bitayami
+            </div>
+        </header>
+
+        <section class="mb-6">
+            <h2 class="section-title">Professional Summary</h2>
+            <p class="text-sm leading-relaxed text-slate-700">
+                Highly motivated IT Developer with 3+ years of experience in Full Stack Development. Specialist in building responsive React JS frontends and scalable .NET backend systems for distributed teams. Proven ability to architect reusable components and integrate cloud services like Azure and Google Cloud for enterprise-level applications.
+            </p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="grid grid-cols-1 gap-2 text-sm">
+                <p><strong>Frontend:</strong> React JS, Redux Toolkit, JavaScript (ES6+), Material-UI (MUI), Tailwind CSS, DevExtreme, Bootstrap, HTML5, CSS3, Figma.</p>
+                <p><strong>Backend:</strong> .NET Core, .NET Framework, C#, MVC Architecture, RESTful APIs, SQL Server.</p>
+                <p><strong>Tools & Cloud:</strong> Agile methodologies, Azure AD, Google Cloud API, Git/GitHub, IIS Hosting, FTP, Python (Basics), Power BI.</p>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="section-title">Experience</h2>
+            <div class="mb-4">
+                <div class="flex justify-between items-baseline">
+                    <span class="job-title">Junior Executive - React & .NET Developer</span>
+                    <span class="date-location">2022 – 2026</span>
+                </div>
+                <div class="flex justify-between items-baseline mb-1">
+                    <span class="company-name text-sm">Aggrandize Ventures Pvt. Ltd</span>
+                    <span class="date-location">Remote</span>
+                </div>
+                <ul>
+                    <li>Architected user-friendly web applications using React JS, implementing reusable components that increased team productivity.</li>
+                    <li>Leveraged MUI, React Hook Forms, and Redux Toolkit to deliver exceptional, high-performance UI experiences.</li>
+                    <li>Integrated Azure Active Directory and Google Cloud services for secure authentication and cloud-based functionality.</li>
+                    <li>Contributed to 5+ full-stack projects using C# and MVC, managing hosting and deployment on IIS servers.</li>
+                    <li>Utilized DevExtreme and Bootstrap to create functional and visually appealing enterprise-level web applications.</li>
+                </ul>
+            </div>
+
+            <div class="mb-4">
+                <div class="flex justify-between items-baseline">
+                    <span class="job-title">Online Technical Trainer (Freelancer)</span>
+                    <span class="date-location">2021 – 2024</span>
+                </div>
+                <div class="flex justify-between items-baseline mb-1">
+                    <span class="company-name text-sm">BITA Academy</span>
+                    <span class="date-location">Remote</span>
+                </div>
+                <ul>
+                    <li>Scheduled and delivered online training programs for technical courses including .NET Core, .NET Framework, HTML, CSS, and JavaScript.</li>
+                    <li>Developed comprehensive learning materials, including video lectures, interactive modules, and quizzes.</li>
+                    <li>Tailored technical content to specific learning platforms and diverse target audience needs.</li>
+                </ul>
+            </div>
+
+            <div class="mb-4">
+                <div class="flex justify-between items-baseline">
+                    <span class="job-title">Graduate Engineering Trainee</span>
+                    <span class="date-location">2013</span>
+                </div>
+                <div class="flex justify-between items-baseline mb-1">
+                    <span class="company-name text-sm">Samsung India Pvt Ltd</span>
+                    <span class="date-location">Factory Support</span>
+                </div>
+                <ul>
+                    <li>Maintained high quality standards in factory operations through Six Sigma implementation and monitoring.</li>
+                    <li>Provided support for the Global Manufacturing Execution System (GMES) and resolved GMAP-related technical issues.</li>
+                    <li>Delivered accurate stock status reports and managed complex delivery order workflows.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="section-title">Education</h2>
+            <div class="flex justify-between items-baseline">
+                <div>
+                    <span class="job-title text-sm">B.Tech in Information Technology</span><br>
+                    <span class="company-name text-xs">Indira Institute of Engineering and Technology</span>
+                </div>
+                <div class="text-right">
+                    <span class="date-location">2008 – 2012</span><br>
+                    <span class="text-sm font-bold text-blue-600">GPA: 8.0/10.0</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Languages</h2>
+            <p class="text-sm text-slate-700">English (Professional Working Proficiency), Telugu (Native), Tamil</p>
+        </section>
+
+        <div class="mt-auto pt-8 border-t border-slate-100 text-[10px] text-center text-slate-400 italic">
+            This document is optimized for Applicant Tracking Systems (ATS) and designed for professional PDF export.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
